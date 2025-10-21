@@ -1,0 +1,19 @@
+/* Global tweaks */
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Utility to ensure sticky bars don't overlap content in some mobile browsers */
+:root {
+  --safe-inset-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.sticky-bottom-safe {
+  padding-bottom: calc(0.75rem + var(--safe-inset-bottom));
+}

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { findProductWithPath } from '../utils/catalog';
 import QuantityInput from '../components/QuantityInput';
 import { useCart } from '../context/CartContext';
@@ -8,6 +8,7 @@ import { ProductCard } from '../components/ProductCard';
 
 const ProductPage: React.FC = () => {
   const { productSlug } = useParams<{ productSlug: string }>();
+  const navigate = useNavigate();
   const { addToCart } = useCart();
 
   const [quantities, setQuantities] = useState<Record<string, number>>({});
@@ -100,17 +101,19 @@ const ProductPage: React.FC = () => {
       <div className="bg-white rounded-xl shadow-xl overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2">
-            <img src={product.image} alt={product.name} className="w-full h-64 md:h-full object-cover"/>
+            <div style={{ aspectRatio: '4 / 3' }} className="bg-brand-light">
+              <img src={product.image} alt={product.name} className="w-full h-full object-cover"/>
+            </div>
           </div>
-          <div className="md:w-1/2 p-8">
-            <h1 className="text-3xl font-bold text-brand-primary">{product.name}</h1>
-            <p className="text-slate-600 mt-4">{product.description}</p>
+          <div className="md:w-1/2 p-6 md:p-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-brand-primary">{product.name}</h1>
+            <p className="text-slate-600 mt-3 md:mt-4 text-sm md:text-base">{product.description}</p>
             <div className="mt-8">
-              <h2 className="text-xl font-semibold mb-4 text-brand-secondary">Select Variants & Quantity</h2>
-              <div className="space-y-4 max-h-96 overflow-y-auto pr-2">
+              <h2 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-brand-secondary">Select Variants & Quantity</h2>
+              <div className="space-y-3 md:space-y-4 max-h-[60vh] md:max-h-96 overflow-y-auto pr-2">
                 {product.variants && product.variants.map(variant => (
                   <div key={variant.id} className="flex justify-between items-center bg-brand-light p-3 rounded-lg">
-                    <span className="font-medium text-brand-secondary">{variant.name}</span>
+                    <span className="font-medium text-brand-secondary text-sm md:text-base">{variant.name}</span>
                     <QuantityInput 
                       quantity={quantities[variant.id] || 0} 
                       onQuantityChange={(q) => handleQuantityChange(variant.id, q)}
@@ -122,7 +125,7 @@ const ProductPage: React.FC = () => {
                 <button 
                   onClick={handleAddToCart}
                   disabled={totalSelected === 0}
-                  className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+                  className="w-full bg-brand-primary hover:bg-brand-primary-hover text-white font-bold py-3 px-5 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:bg-slate-400 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
                 >
                   Add to Order ({totalSelected} {totalSelected === 1 ? 'item' : 'items'})
                 </button>
@@ -134,6 +137,25 @@ const ProductPage: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      {/* Sticky mobile action bar for quicker checkout */}
+      <div className="fixed bottom-0 inset-x-0 md:hidden bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85 border-t border-slate-200 p-3 shadow-lg">
+        <div className="max-w-3xl mx-auto flex items-center gap-3">
+          <div className="flex-1 text-sm text-slate-600">
+            {totalSelected > 0 ? `${totalSelected} item${totalSelected === 1 ? '' : 's'} selected` : 'Select items'}
+          </div>
+          <button
+            onClick={() => {
+              if (totalSelected > 0) {
+                handleAddToCart();
+              }
+              navigate('/cart');
+            }}
+            className="bg-brand-primary text-white font-semibold px-4 py-2 rounded-lg"
+          >
+            Go to Cart
+          </button>
         </div>
       </div>
     </div>

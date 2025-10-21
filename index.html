@@ -3,8 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poorna Houseware B2B Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poorna Houseware B2B Catalog</title>
+  <meta name="description" content="Browse Poorna Houseware's B2B catalog of quality houseware products. Fast, mobile-first browsing with WhatsApp ordering." />
+  <meta name="theme-color" content="#c53030" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Poorna Houseware – B2B Catalog" />
+  <meta property="og:description" content="Explore categories and products with a modern, mobile-friendly UI." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/" />
+  <meta property="og:image" content="/assets/images/og-default.svg" />
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Poorna Houseware – B2B Catalog" />
+  <meta name="twitter:description" content="Explore categories and products with a modern, mobile-friendly UI." />
+  <meta name="twitter:image" content="/assets/images/og-default.svg" />
+  <link rel="canonical" href="/" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -53,5 +67,7 @@
   <body class="bg-white font-sans text-slate-800">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
+    <!-- Skip link for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:bg-white focus:text-black focus:px-3 focus:py-2 focus:rounded shadow">Skip to content</a>
   </body>
 </html>
