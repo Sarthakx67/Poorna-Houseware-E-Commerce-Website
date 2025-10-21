@@ -1,0 +1,5 @@
+{
+  "name": "B2B Catalog to WhatsApp",
+  "description": "A simple B2B product catalog application where users can select items and quantities, then send their order directly to a WhatsApp number for a quote.",
+  "requestFramePermissions": []
+}
