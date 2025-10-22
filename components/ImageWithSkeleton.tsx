@@ -4,7 +4,7 @@ interface Props extends React.ImgHTMLAttributes<HTMLImageElement> {
   wrapperClassName?: string;
   fallbackSrc?: string; // fallback image when original fails
   priority?: boolean; // eager + high priority for LCP images
-  enableFormats?: boolean; // try AVIF/WEBP based on filename
+  enableFormats?: boolean; // try AVIF/WEBP based on filename (only if those files exist)
 }
 
 const changeExt = (src: string | undefined, ext: string): string | undefined => {
@@ -14,7 +14,7 @@ const changeExt = (src: string | undefined, ext: string): string | undefined => 
   return src.slice(0, idx) + ext;
 };
 
-const ImageWithSkeleton: React.FC<Props> = ({ wrapperClassName, className, onLoad, onError, fallbackSrc = '/assets/images/placeholder.svg', priority = false, enableFormats = true, loading, fetchPriority, ...imgProps }) => {
+const ImageWithSkeleton: React.FC<Props> = ({ wrapperClassName, className, onLoad, onError, fallbackSrc = '/assets/images/placeholder.svg', priority = false, enableFormats = false, loading, fetchPriority, ...imgProps }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -31,7 +31,9 @@ const ImageWithSkeleton: React.FC<Props> = ({ wrapperClassName, className, onLoa
       <picture className={`absolute inset-0 block`}>
         {enableFormats && (
           <>
-            {/* Prefer AVIF/WEBP if files are present in the same folder with different extension */}
+            {/* Prefer AVIF/WEBP if files are present in the same folder with different extension
+                Note: only enable if those files actually exist; otherwise browsers will not
+                fall back on 404. We keep this opt-in via enableFormats=false by default. */}
             <source type="image/avif" srcSet={changeExt(imgProps.src as string, '.avif')} />
             <source type="image/webp" srcSet={changeExt(imgProps.src as string, '.webp')} />
           </>
