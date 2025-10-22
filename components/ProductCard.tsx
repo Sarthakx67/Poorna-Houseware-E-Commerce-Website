@@ -14,11 +14,13 @@ export const ProductCard: React.FC<{ product: Product; index: number }> = ({ pro
        src={product.image}
        alt={product.name}
        loading="lazy"
+       fetchPriority="low"
        decoding="async"
        wrapperClassName="w-full h-full"
        className="block w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
        width={800}
        height={600}
+       sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
      />
    </div>
     <div className="p-4 md:p-5">

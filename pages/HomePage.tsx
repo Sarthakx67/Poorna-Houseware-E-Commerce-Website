@@ -18,11 +18,13 @@ const CategoryCard: React.FC<{ category: Category; index: number }> = ({ categor
         src={category.image}
         alt={category.name}
         loading="lazy"
+        fetchPriority="low"
         decoding="async"
         wrapperClassName="w-full h-full"
         className="block w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
         width={800}
         height={600}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
       <h3 className="absolute bottom-0 left-0 p-6 text-2xl font-bold text-white">{category.name}</h3>
@@ -77,12 +79,13 @@ const HomePage: React.FC = () => {
         </div>
       ) : (
         <div className="mt-6">
-          {catalog.slice(0, 3).map(cat => (
+          {catalog.slice(0, 3).map((cat, idx) => (
             <CategoryLane
               key={cat.slug}
               title={cat.name}
               items={cat.items.map(p => ({ to: `/product/${p.slug}`, name: p.name, image: p.image }))}
               viewAllTo={`/category/${cat.slug}`}
+              priorityFirstN={idx === 0 ? 2 : 0}
             />
           ))}
         </div>

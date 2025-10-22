@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { findProductWithPath } from '../utils/catalog';
 import QuantityInput from '../components/QuantityInput';
+import ImageWithSkeleton from '../components/ImageWithSkeleton';
 import { useCart } from '../context/CartContext';
 import { CartItem, Category, Product } from '../types';
 import { ProductCard } from '../components/ProductCard';
@@ -102,7 +103,16 @@ const ProductPage: React.FC = () => {
         <div className="md:flex">
           <div className="md:w-1/2">
             <div style={{ aspectRatio: '4 / 3' }} className="bg-brand-light">
-              <img src={product.image} alt={product.name} className="w-full h-full object-cover"/>
+              <ImageWithSkeleton
+                src={product.image}
+                alt={product.name}
+                wrapperClassName="w-full h-full"
+                className="w-full h-full object-cover"
+                width={1200}
+                height={900}
+                priority
+                decoding="async"
+              />
             </div>
           </div>
           <div className="md:w-1/2 p-6 md:p-8">

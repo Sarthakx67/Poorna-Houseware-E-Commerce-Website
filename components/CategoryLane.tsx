@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import SmallCard, { SmallCardItem } from './SmallCard';
 
-const CategoryLane: React.FC<{ title: string; items: SmallCardItem[]; viewAllTo?: string }>
-= ({ title, items, viewAllTo }) => {
+const CategoryLane: React.FC<{ title: string; items: SmallCardItem[]; viewAllTo?: string; priorityFirstN?: number }>
+= ({ title, items, viewAllTo, priorityFirstN = 0 }) => {
   if (!items || items.length === 0) return null;
   return (
     <section className="mb-8">
@@ -14,8 +14,8 @@ const CategoryLane: React.FC<{ title: string; items: SmallCardItem[]; viewAllTo?
         )}
       </div>
       <div className="flex overflow-x-auto gap-3 snap-x snap-mandatory -mx-1 px-1">
-        {items.map((it) => (
-          <SmallCard key={it.to} item={it} className="min-w-[150px] md:min-w-[180px] snap-start" />
+        {items.map((it, idx) => (
+          <SmallCard key={it.to} item={it} priority={idx < priorityFirstN} className="min-w-[150px] md:min-w-[180px] snap-start" />
         ))}
       </div>
     </section>

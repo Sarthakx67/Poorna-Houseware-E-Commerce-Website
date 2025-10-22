@@ -8,7 +8,7 @@ export interface SmallCardItem {
   image?: string;
 }
 
-const SmallCard: React.FC<{ item: SmallCardItem } & React.HTMLAttributes<HTMLAnchorElement>> = ({ item, className }) => {
+const SmallCard: React.FC<{ item: SmallCardItem; priority?: boolean } & React.HTMLAttributes<HTMLAnchorElement>> = ({ item, className, priority = false }) => {
   return (
     <Link to={item.to} className={`block rounded-lg overflow-hidden shadow hover:shadow-md bg-white ${className ?? ''}`}>
       <div className="w-full bg-slate-100" style={{ aspectRatio: '4 / 3' }}>
@@ -18,7 +18,9 @@ const SmallCard: React.FC<{ item: SmallCardItem } & React.HTMLAttributes<HTMLAnc
             alt={item.name}
             className="block w-full h-full object-cover"
             wrapperClassName="w-full h-full"
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : 'low'}
+            priority={priority}
             decoding="async"
             width={600}
             height={450}
