@@ -29,7 +29,7 @@ const ImageWithSkeleton: React.FC<Props> = ({ wrapperClassName, className, onLoa
 
       {/* Loading spinner while real image loads */}
       {!loaded && (
-        <div className="absolute inset-0 grid place-items-center" role="status" aria-live="polite">
+        <div className="absolute inset-0 grid place-items-center pointer-events-none" role="status" aria-live="polite">
           <div className="h-8 w-8 rounded-full border-2 border-slate-300 border-t-brand-primary animate-spin"></div>
           <span className="sr-only">Loading image…</span>
         </div>

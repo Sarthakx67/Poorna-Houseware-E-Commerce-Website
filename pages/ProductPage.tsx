@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { findProductWithPath } from '../utils/catalog';
 import QuantityInput from '../components/QuantityInput';
@@ -16,6 +16,15 @@ const ProductPage: React.FC = () => {
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [showSuccess, setShowSuccess] = useState(false);
   const [showImage, setShowImage] = useState(false);
+  const mountedAtRef = useRef<number>(Date.now());
+  useEffect(() => {
+    mountedAtRef.current = Date.now();
+  }, []);
+  const openFullscreenSafely = () => {
+    // Avoid accidental click-through from navigation: ignore clicks right after mount
+    if (Date.now() - mountedAtRef.current < 350) return;
+    setShowImage(true);
+  };
 
   const { product, path } = useMemo(() => findProductWithPath(productSlug), [productSlug]);
 
@@ -114,12 +123,12 @@ const ProductPage: React.FC = () => {
                 height={900}
                 priority
                 decoding="async"
-                onClick={() => setShowImage(true)}
+                onClick={openFullscreenSafely}
               />
               {/* View Fullscreen button */}
               <button
                 type="button"
-                onClick={() => setShowImage(true)}
+                onClick={openFullscreenSafely}
                 className="absolute bottom-3 right-3 bg-black/60 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
                 aria-label="View image fullscreen"
               >
