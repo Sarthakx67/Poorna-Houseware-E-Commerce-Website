@@ -30,7 +30,7 @@ export const catalog: Category[] = [
         ]
       },
       {
-        name: "WaterProof Putty Birla White (kg)",
+        name: "Birla White WaterProof Putty (kg)",
         slug: "birla-waterproof-putty",
         description: "Advanced putty with water-repellent properties.",
         image: "/assets/images/waterproof-putty.jpg",
@@ -96,55 +96,64 @@ export const catalog: Category[] = [
         image: "/assets/images/door-aldrops.jpg",
         subItems: [
           {
-            name: "Classic Antique Aldrop",
-            slug: "classic-antique-aldrop",
+            name: "Aldrop SS-2013",
+            slug: "aldrop-ss-2013",
             description: "A timeless, decorative aldrop with a rustic antique finish, perfect for traditional doors.",
-            image: "/assets/images/aldrop-antique.jpg",
+            image: "/assets/images/door-aldrops.jpg",
             variants: [
-              { id: "ALD-ANT-12", name: "12-inch" },
               { id: "ALD-ANT-10", name: "10-inch" },
-              { id: "ALD-ANT-8", name: "8-inch" },
             ]
           },
           {
-            name: "Modern Stainless Steel Aldrop",
-            slug: "modern-stainless-steel-aldrop",
+            name: "Aldrop Two-Star-White",
+            slug: "aldrop-two-star-white",
             description: "Sleek and durable aldrop made from high-grade stainless steel for a contemporary look.",
-            image: "/assets/images/aldrop-steel.jpg",
+            image: "/assets/images/twostar.jpg",
             variants: [
-              { id: "ALD-MSS-12", name: "12-inch" },
-              { id: "ALD-MSS-10", name: "10-inch" },
-              { id: "ALD-MSS-8", name: "8-inch" },
+              { id: "Two-Star-White-12", name: "12-inch" },
+              { id: "Two-Star-White-10", name: "10-inch" },
+              { id: "Two-Star-White-8", name: "8-inch" },
             ]
           },
           {
-            name: "Ornate Carved Aldrop",
-            slug: "ornate-carved-aldrop",
+            name: "Aldrop Two-Star-Black",
+            slug: "aldrop-two-star-black",
+            description: "Sleek and durable aldrop made from high-grade stainless steel for a contemporary look.",
+            image: "/assets/images/twostar-black.jpg",
+            variants: [
+              { id: "Two-Star-Black-12", name: "12-inch" },
+              { id: "Two-Star-Black-10", name: "10-inch" },
+              { id: "Two-Star-Black-8", name: "8-inch" },
+            ]
+          },
+          {
+            name: "Aldrop-Apple",
+            slug: "aldrop-apple",
             description: "An elegant aldrop featuring intricate carvings, adding a touch of luxury to your doors.",
-            image: "/assets/images/aldrop-ornate.jpg",
+            image: "/assets/images/aldrop-apple.jpg",
             variants: [
-              { id: "ALD-ORN-12", name: "12-inch" },
-              { id: "ALD-ORN-10", name: "10-inch" },
+              { id: "Apple-12", name: "12-inch" },
+              { id: "Apple-10", name: "10-inch" },
             ]
           },
           {
-            name: "Minimalist Black Aldrop",
-            slug: "minimalist-black-aldrop",
+            name: "Aldrop-Lehar",
+            slug: "aldrop-lehar",
+            description: "An elegant aldrop featuring intricate carvings, adding a touch of luxury to your doors.",
+            image: "/assets/images/aldrop-lehar.jpg",
+            variants: [
+              { id: "Aldrop-Lehar-12", name: "12-inch" },
+              { id: "Aldrop-Lehar-10", name: "10-inch" },
+            ]
+          },
+          {
+            name: "Aldrop-4-Line",
+            slug: "aldrop-4-line",
             description: "A simple yet stylish aldrop in a matte black finish, ideal for modern and minimalist interiors.",
-            image: "/assets/images/aldrop-black.jpg",
+            image: "/assets/images/aldrop-4-line.jpg",
             variants: [
               { id: "ALD-BLK-10", name: "10-inch" },
               { id: "ALD-BLK-8", name: "8-inch" },
-            ]
-          },
-          {
-            name: "Heavy-Duty Security Aldrop",
-            slug: "heavy-duty-security-aldrop",
-            description: "A robust and sturdy aldrop designed for maximum security and long-lasting performance.",
-            image: "/assets/images/aldrop-security.jpg",
-            variants: [
-              { id: "ALD-HD-12", name: "12-inch" },
-              { id: "ALD-HD-10", name: "10-inch" },
             ]
           }
         ]
@@ -211,7 +220,7 @@ export const catalog: Category[] = [
     ]
   },
   {
-    name: "Boards, Plywood & FlushDoor",
+    name: "Boards, Plywood, FlushDoor, Boilo, Hdhmr and Mdf",
     slug: "boards-plywood-doors",
     image: "/assets/images/plywood-category.jpg",
     items: [
@@ -277,7 +286,7 @@ export const catalog: Category[] = [
             name: "Height: 72 inches",
             slug: "flushdoor-30mm-72",
             description: "Flush doors with a height of 72 inches, available in various widths.",
-            image: "/assets/images/flushdoor-72.jpg",
+            image: "/assets/images/flushdoor-main.jpg",
             variants: [
               { id: "FD30-72x24", name: "Width: 24 inches" }, { id: "FD30-72x27", name: "Width: 27 inches" }, { id: "FD30-72x30", name: "Width: 30 inches" }, { id: "FD30-72x33", name: "Width: 33 inches" }, { id: "FD30-72x36", name: "Width: 36 inches" }, { id: "FD30-72x39", name: "Width: 39 inches" }, { id: "FD30-72x42", name: "Width: 42 inches" }, { id: "FD30-72x45", name: "Width: 45 inches" }, { id: "FD30-72x48", name: "Width: 48 inches" },
             ]
@@ -286,7 +295,7 @@ export const catalog: Category[] = [
             name: "Height: 75 inches",
             slug: "flushdoor-30mm-75",
             description: "Flush doors with a height of 75 inches, available in various widths.",
-            image: "/assets/images/flushdoor-75.jpg",
+            image: "/assets/images/flushdoor-main.jpg",
             variants: [
               { id: "FD30-75x24", name: "Width: 24 inches" }, { id: "FD30-75x27", name: "Width: 27 inches" }, { id: "FD30-75x30", name: "Width: 30 inches" }, { id: "FD30-75x33", name: "Width: 33 inches" }, { id: "FD30-75x36", name: "Width: 36 inches" }, { id: "FD30-75x39", name: "Width: 39 inches" }, { id: "FD30-75x42", name: "Width: 42 inches" }, { id: "FD30-75x45", name: "Width: 45 inches" }, { id: "FD30-75x48", name: "Width: 48 inches" },
             ]
@@ -295,7 +304,7 @@ export const catalog: Category[] = [
             name: "Height: 78 inches",
             slug: "flushdoor-30mm-78",
             description: "Flush doors with a height of 78 inches, available in various widths.",
-            image: "/assets/images/flushdoor-78.jpg",
+            image: "/assets/images/flushdoor-main.jpg",
             variants: [
               { id: "FD30-78x24", name: "Width: 24 inches" }, { id: "FD30-78x27", name: "Width: 27 inches" }, { id: "FD30-78x30", name: "Width: 30 inches" }, { id: "FD30-78x33", name: "Width: 33 inches" }, { id: "FD30-78x36", name: "Width: 36 inches" }, { id: "FD30-78x39", name: "Width: 39 inches" }, { id: "FD30-78x42", name: "Width: 42 inches" }, { id: "FD30-78x45", name: "Width: 45 inches" }, { id: "FD30-78x48", name: "Width: 48 inches" },
             ]
@@ -304,7 +313,7 @@ export const catalog: Category[] = [
             name: "Height: 81 inches",
             slug: "flushdoor-30mm-81",
             description: "Flush doors with a height of 81 inches, available in various widths.",
-            image: "/assets/images/flushdoor-81.jpg",
+            image: "/assets/images/flushdoor-main.jpg",
             variants: [
               { id: "FD30-81x24", name: "Width: 24 inches" }, { id: "FD30-81x27", name: "Width: 27 inches" }, { id: "FD30-81x30", name: "Width: 30 inches" }, { id: "FD30-81x33", name: "Width: 33 inches" }, { id: "FD30-81x36", name: "Width: 36 inches" }, { id: "FD30-81x39", name: "Width: 39 inches" }, { id: "FD30-81x42", name: "Width: 42 inches" }, { id: "FD30-81x45", name: "Width: 45 inches" }, { id: "FD30-81x48", name: "Width: 48 inches" },
             ]
@@ -313,11 +322,44 @@ export const catalog: Category[] = [
             name: "Height: 84 inches",
             slug: "flushdoor-30mm-84",
             description: "Flush doors with a height of 84 inches, available in various widths.",
-            image: "/assets/images/flushdoor-84.jpg",
+            image: "/assets/images/flushdoor-main.jpg",
             variants: [
               { id: "FD30-84x24", name: "Width: 24 inches" }, { id: "FD30-84x27", name: "Width: 27 inches" }, { id: "FD30-84x30", name: "Width: 30 inches" }, { id: "FD30-84x33", name: "Width: 33 inches" }, { id: "FD30-84x36", name: "Width: 36 inches" }, { id: "FD30-84x39", name: "Width: 39 inches" }, { id: "FD30-84x42", name: "Width: 42 inches" }, { id: "FD30-84x45", name: "Width: 45 inches" }, { id: "FD30-84x48", name: "Width: 48 inches" },
             ]
           }
+        ]
+      },
+      {
+        name: "Boilo",
+        slug: "Boilo",
+        description: "High-quality boards for furniture and construction.",
+        image: "/assets/images/boilo.jpg",
+        variants: [
+          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
+          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
+          { id: "B19-6x3", name: "Size 6x3" },
+        ]
+      },
+      {
+        name: "HDHMR",
+        slug: "HDHMR",
+        description: "High-quality boards for furniture and construction.",
+        image: "/assets/images/hdhmr.jpg",
+        variants: [
+          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
+          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
+          { id: "B19-6x3", name: "Size 6x3" },
+        ]
+      },
+      {
+        name: "MDF",
+        slug: "MDF",
+        description: "High-quality boards for furniture and construction.",
+        image: "/assets/images/mdf.jpg",
+        variants: [
+          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
+          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
+          { id: "B19-6x3", name: "Size 6x3" },
         ]
       }
     ]
@@ -361,24 +403,24 @@ export const catalog: Category[] = [
         image: "/assets/images/toilet-seats.jpg",
         subItems: [
           {
-            name: "European Wall-Hung Seat",
-            slug: "european-wall-hung-seat",
+            name: "EWC Seat",
+            slug: "ewc-seat",
             description: "Sleek, wall-mounted design that saves space and offers a contemporary look.",
-            image: "/assets/images/toilet-wall-hung.jpg",
+            image: "/assets/images/ewc-seat.jpg",
             variants: [{ id: "TS-EWH-STD", name: "Standard Model" }]
           },
           {
-            name: "One-Piece Floor Mount Seat",
-            slug: "one-piece-floor-mount-seat",
+            name: "Anglo Indian Seat",
+            slug: "anglo-indian-seat",
             description: "A seamless, easy-to-clean one-piece toilet that sits on the floor.",
-            image: "/assets/images/toilet-one-piece.jpg",
+            image: "/assets/images/anglo-indian-seat.jpg",
             variants: [{ id: "TS-OPM-STD", name: "Standard Model" }]
           },
           {
-            name: "Smart E-Toilet",
-            slug: "smart-e-toilet",
+            name: "One Piece Seat",
+            slug: "one-piece-seat",
             description: "Advanced smart toilet with features like bidet, heated seat, and auto-flush.",
-            image: "/assets/images/toilet-smart.jpg",
+            image: "/assets/images/one-piece-seat.jpg",
             variants: [{ id: "TS-SET-STD", name: "Standard Model" }]
           }
         ]
@@ -390,25 +432,147 @@ export const catalog: Category[] = [
         image: "/assets/images/washbasins.jpg",
         subItems: [
           {
-            name: "Counter-Top Ceramic Basin",
-            slug: "counter-top-ceramic-basin",
+            name: "One Piece Ceramic Basin",
+            slug: "one-piece-ceramic-basin",
             description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
-            image: "/assets/images/basin-counter-top.jpg",
-            variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+            image: "/assets/images/one-piece-ceramic-basin.jpg",
+            subItems: [
+              {
+                name: "One Piece Ceramic Basin 001",
+                slug: "one-piece-ceramic-basin-001",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/one-piece-ceramic-basin-001.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "One Piece Ceramic Basin 002",
+                slug: "one-piece-ceramic-basin-002",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/one-piece-ceramic-basin-002.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "One Piece Ceramic Basin 003",
+                slug: "one-piece-ceramic-basin-003",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/one-piece-ceramic-basin-003.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "One Piece Ceramic Basin 004",
+                slug: "one-piece-ceramic-basin-004",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/one-piece-ceramic-basin-004.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "One Piece Ceramic Basin 005",
+                slug: "one-piece-ceramic-basin-005",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/one-piece-ceramic-basin-005.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              }
+            ]
           },
           {
             name: "Pedestal Basin",
             slug: "pedestal-basin",
             description: "A classic, floor-standing basin with a pedestal that conceals pipework.",
             image: "/assets/images/basin-pedestal.jpg",
-            variants: [{ id: "WB-PB-STD", name: "Standard Model" }]
+            subItems: [
+              {
+                name: "Pedistal Basin 001",
+                slug: "pedestal-basin-001",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-001.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 002",
+                slug: "pedestal-basin-002",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-002.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 003",
+                slug: "pedestal-basin-003",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-003.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 004",
+                slug: "pedestal-basin-004",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-004.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 005",
+                slug: "pedestal-basin-005",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-005.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 006",
+                slug: "pedestal-basin-006",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-006.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 007",
+                slug: "pedestal-basin-007",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-007.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Pedistal Basin 008",
+                slug: "pedestal-basin-008",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/pedestal-basin-008.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              }
+            ]
           },
           {
-            name: "Wall-Mounted Glass Basin",
-            slug: "wall-mounted-glass-basin",
+            name: "Platform Basin",
+            slug: "platform-basin",
             description: "A chic, space-saving basin made from toughened glass for a minimalist look.",
-            image: "/assets/images/basin-glass.jpg",
-            variants: [{ id: "WB-WMG-STD", name: "Standard Model" }]
+            image: "/assets/images/platform-basin.jpg",
+            subItems: [
+              {
+                name: "Platform Basin 001",
+                slug: "platform-basin-001",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/platform-basin-001.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Platform Basin 002",
+                slug: "platform-basin-002",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/platform-basin-002.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Platform Basin 003",
+                slug: "platform-basin-003",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/platform-basin-003.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              },
+              {
+                name: "Platform Basin 004",
+                slug: "platform-basin-004",
+                description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
+                image: "/assets/images/platform-basin-004.jpg",
+                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+              }
+            ]
           }
         ]
       },
@@ -419,24 +583,24 @@ export const catalog: Category[] = [
         image: "/assets/images/vanities.jpg",
         subItems: [
            {
-            name: "Modern Floating Vanity",
-            slug: "modern-floating-vanity",
+            name: "Vanity 001",
+            slug: "vanity-001",
             description: "A wall-mounted vanity that creates a sense of space and offers a clean, modern aesthetic.",
-            image: "/assets/images/vanity-floating.jpg",
+            image: "/assets/images/vanity-001.jpg",
             variants: [{ id: "VN-MFV-STD", name: "Standard Set" }]
           },
           {
-            name: "Classic Wooden Vanity",
-            slug: "classic-wooden-vanity",
+            name: "Vanity 002",
+            slug: "vanity-002",
             description: "A timeless vanity crafted from high-quality wood, adding warmth and elegance.",
-            image: "/assets/images/vanity-wooden.jpg",
+            image: "/assets/images/vanity-002.jpg",
             variants: [{ id: "VN-CWV-STD", name: "Standard Set" }]
           },
           {
-            name: "Compact Vanity Set",
-            slug: "compact-vanity-set",
+            name: "Vanity 003",
+            slug: "vanity-003",
             description: "A smart, all-in-one solution perfect for smaller bathrooms and powder rooms.",
-            image: "/assets/images/vanity-compact.jpg",
+            image: "/assets/images/vanity-003.jpg",
             variants: [{ id: "VN-CVS-STD", name: "Standard Set" }]
           }
         ]
@@ -448,11 +612,11 @@ export const catalog: Category[] = [
         image: "/assets/images/taps-faucets.jpg",
         subItems: [
           {
-            name: "Single Lever Mixer",
-            slug: "single-lever-mixer",
-            description: "Modern and convenient, controls both hot and cold water with a single lever.",
-            image: "/assets/images/tap-mixer.jpg",
-            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+            name: "Bib Cock",
+            slug: "bib-cock",
+            description: "A wall-mounted tap, commonly used for utility areas and outdoor spaces.",
+            image: "/assets/images/tap-bib.jpg",
+            variants: [{ id: "TF-BC-STD", name: "Chrome Finish" }]
           },
           {
             name: "Pillar Cock",
@@ -462,11 +626,46 @@ export const catalog: Category[] = [
             variants: [{ id: "TF-PC-STD", name: "Chrome Finish" }]
           },
           {
-            name: "Bib Cock",
-            slug: "bib-cock",
-            description: "A wall-mounted tap, commonly used for utility areas and outdoor spaces.",
-            image: "/assets/images/tap-bib.jpg",
-            variants: [{ id: "TF-BC-STD", name: "Chrome Finish" }]
+            name: "Long Body",
+            slug: "long-body",
+            description: "A classic tap design for basins, providing a steady stream water.",
+            image: "/assets/images/long-body.jpg",
+            variants: [{ id: "TF-PC-STD", name: "Chrome Finish" }]
+          },
+          {
+            name: "Swan Neck Pillar Cock",
+            slug: "swan-neck-pillar-cock",
+            description: "A classic tap design for basins, providing a steady stream water.",
+            image: "/assets/images/swan-neck-pillar-cock.jpg",
+            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+          },
+          {
+            name: "Sink Cock",
+            slug: "sink-cock",
+            description: "A classic tap design for basins, providing a steady stream water.",
+            image: "/assets/images/sink-cock.jpg",
+            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+          },
+          {
+            name: "Angle Cock",
+            slug: "angle-cock",
+            description: "A classic tap design for basins, providing a steady stream water.",
+            image: "/assets/images/angle-cock.jpg",
+            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+          },
+          {
+            name: "2 Way Angle Cock",
+            slug: "way-2-angle-cock",
+            description: "A classic tap design for basins, providing a steady stream water.",
+            image: "/assets/images/way-2-angle-cock.jpg",
+            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+          },
+          {
+            name: "2 Way Bib Cock",
+            slug: "way-2-bib-cock",
+            description: "A classic tap design for basins, providing a steady stream water.",
+            image: "/assets/images/way-2-bib-cock.jpg",
+            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
           }
         ]
       },
