@@ -18,9 +18,21 @@ export default defineConfig(({ mode }) => {
       ...(isProd
         ? [
             viteImagemin({
+              // Exclude a couple of images that throw errors in mozjpeg (likely progressive/corrupt metadata)
+              filter: (id: string) => {
+                const p = id.replace(/\\\\/g, '/').toLowerCase();
+                if (
+                  p.includes('/assets/images/pedestal-basin-006.jpg') ||
+                  p.includes('/assets/images/basin-counter-top.jpg')
+                ) {
+                  return false;
+                }
+                return /\.(png|jpe?g|svg|webp|gif|avif)$/i.test(p);
+              },
               gifsicle: { optimizationLevel: 3 },
               optipng: { optimizationLevel: 5 },
-              mozjpeg: { quality: 72, progressive: true },
+              // Be slightly conservative to reduce error rate while keeping good savings
+              mozjpeg: { quality: 75, progressive: true },
               pngquant: { quality: [0.65, 0.8], speed: 3 },
               svgo: {
                 plugins: [
