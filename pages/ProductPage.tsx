@@ -3,6 +3,7 @@ import { useParams, Link, Navigate, useNavigate } from 'react-router-dom';
 import { findProductWithPath } from '../utils/catalog';
 import QuantityInput from '../components/QuantityInput';
 import ImageWithSkeleton from '../components/ImageWithSkeleton';
+import FullscreenImage from '../components/FullscreenImage';
 import { useCart } from '../context/CartContext';
 import { CartItem, Category, Product } from '../types';
 import { ProductCard } from '../components/ProductCard';
@@ -14,6 +15,7 @@ const ProductPage: React.FC = () => {
 
   const [quantities, setQuantities] = useState<Record<string, number>>({});
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showImage, setShowImage] = useState(false);
 
   const { product, path } = useMemo(() => findProductWithPath(productSlug), [productSlug]);
 
@@ -102,17 +104,27 @@ const ProductPage: React.FC = () => {
       <div className="bg-white rounded-xl shadow-xl overflow-hidden">
         <div className="md:flex">
           <div className="md:w-1/2">
-            <div style={{ aspectRatio: '4 / 3' }} className="bg-brand-light">
+            <div style={{ aspectRatio: '4 / 3' }} className="relative bg-brand-light group">
               <ImageWithSkeleton
                 src={product.image}
                 alt={product.name}
                 wrapperClassName="w-full h-full"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-zoom-in"
                 width={1200}
                 height={900}
                 priority
                 decoding="async"
+                onClick={() => setShowImage(true)}
               />
+              {/* View Fullscreen button */}
+              <button
+                type="button"
+                onClick={() => setShowImage(true)}
+                className="absolute bottom-3 right-3 bg-black/60 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity"
+                aria-label="View image fullscreen"
+              >
+                View image
+              </button>
             </div>
           </div>
           <div className="md:w-1/2 p-6 md:p-8">
@@ -168,6 +180,9 @@ const ProductPage: React.FC = () => {
           </button>
         </div>
       </div>
+      {showImage && (
+        <FullscreenImage src={product.image} alt={product.name} onClose={() => setShowImage(false)} />
+      )}
     </div>
   );
 };

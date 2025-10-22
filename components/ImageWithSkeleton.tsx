@@ -27,6 +27,14 @@ const ImageWithSkeleton: React.FC<Props> = ({ wrapperClassName, className, onLoa
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${loaded ? 'opacity-0' : 'opacity-100'}`}
       />
 
+      {/* Loading spinner while real image loads */}
+      {!loaded && (
+        <div className="absolute inset-0 grid place-items-center" role="status" aria-live="polite">
+          <div className="h-8 w-8 rounded-full border-2 border-slate-300 border-t-brand-primary animate-spin"></div>
+          <span className="sr-only">Loading image…</span>
+        </div>
+      )}
+
       {/* Top: actual image fades in when loaded; if it errors, placeholder remains */}
       <picture className={`absolute inset-0 block`}>
         {enableFormats && (
