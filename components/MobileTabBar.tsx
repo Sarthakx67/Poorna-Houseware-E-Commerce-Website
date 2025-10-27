@@ -1,4 +1,5 @@
 import React from 'react';
+import { useCart } from '../context/CartContext';
 import { Link, useLocation } from 'react-router-dom';
 
 const TabLink: React.FC<{ to: string; label: string; icon: React.ReactNode; active: boolean }> = ({ to, label, icon, active }) => (
@@ -21,6 +22,8 @@ const MobileTabBar: React.FC = () => {
   const isHome = path === '/' || path === '';
   const isCategories = path.startsWith('/categories') || path.startsWith('/category');
   const isCart = path.startsWith('/cart');
+
+  const { itemCount } = useCart();
 
   return (
     <nav className="md:hidden fixed bottom-0 inset-x-0 z-50 bg-white/90 backdrop-blur border-t border-slate-200" role="navigation" aria-label="Primary">
@@ -52,10 +55,17 @@ const MobileTabBar: React.FC = () => {
             label="Cart"
             active={isCart}
             icon={
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                <path fillRule="evenodd" d="M2.25 3a.75.75 0 000 1.5h1.386c.11 0 .206.072.236.178l.486 1.702A2.25 2.25 0 006.545 7.5H18a.75.75 0 01.685 1.029l-2.25 5.25A2.25 2.25 0 0114.34 15H8.91a2.25 2.25 0 01-2.12-1.5l-1.3-3.9A.75.75 0 004.75 9H3a.75.75 0 010-1.5h1.25l-.25-.875A2.25 2.25 0 003.636 5.2L3.15 3.5A1.75 1.75 0 001.636 2h-.386A.75.75 0 000 2.75.75.75 0 00.75 3.5h.5z" clipRule="evenodd" />
-                <path d="M9 18.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM18 20.25a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
-              </svg>
+              <span className="relative">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                  <path fillRule="evenodd" d="M2.25 3a.75.75 0 000 1.5h1.386c.11 0 .206.072.236.178l.486 1.702A2.25 2.25 0 006.545 7.5H18a.75.75 0 01.685 1.029l-2.25 5.25A2.25 2.25 0 0114.34 15H8.91a2.25 2.25 0 01-2.12-1.5l-1.3-3.9A.75.75 0 004.75 9H3a.75.75 0 010-1.5h1.25l-.25-.875A2.25 2.25 0 003.636 5.2L3.15 3.5A1.75 1.75 0 001.636 2h-.386A.75.75 0 000 2.75.75.75 0 00.75 3.5h.5z" clipRule="evenodd" />
+                  <path d="M9 18.75a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM18 20.25a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
+                </svg>
+                {itemCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-brand-primary text-white text-[10px] md:text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center animate-pulse">
+                    {itemCount}
+                  </span>
+                )}
+              </span>
             }
           />
         </div>
