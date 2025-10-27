@@ -26,6 +26,7 @@ export const catalog: Category[] = [
         variants: [
           { id: "BWC-50", name: "50kg" },
           { id: "BWC-25", name: "25kg" },
+          { id: "BWC-5", name: "5kg" },
           { id: "BWC-1", name: "1kg" },
         ]
       },
@@ -76,10 +77,22 @@ export const catalog: Category[] = [
         description: "Rich matt finish paint that provides a durable wall finish.",
         image: "/assets/images/paint-premium.jpg",
         variants: [
-            { id: "APP-20L", name: "20L" },
-            { id: "APP-10L", name: "10L" },
-            { id: "APP-4L", name: "4L" },
-            { id: "APP-1L", name: "1L" },
+            { id: "asian-paints-premium--APP-20L", name: "20L" },
+            { id: "asian-paints-premium--APP-10L", name: "10L" },
+            { id: "asian-paints-premium--APP-4L", name: "4L" },
+            { id: "asian-paints-premium--APP-1L", name: "1L" },
+        ]
+      },
+      {
+        name: "Asian Paints - Damp Proof",
+        slug: "asian-paints-dampproof",
+        description: "Rich matt finish paint that provides a durable wall finish.",
+        image: "/assets/images/asian-paints-dampproof.jpg",
+        variants: [
+            { id: "asian-paints-dampproof--APP-20L", name: "20L" },
+            { id: "asian-paints-dampproof--APP-10L", name: "10L" },
+            { id: "asian-paints-dampproof--APP-4L", name: "4L" },
+            { id: "asian-paints-dampproof--APP-1L", name: "1L" },
         ]
       }
     ]
@@ -101,7 +114,9 @@ export const catalog: Category[] = [
             description: "A timeless, decorative aldrop with a rustic antique finish, perfect for traditional doors.",
             image: "/assets/images/door-aldrops.jpg",
             variants: [
+              { id: "ALD-ANT-12", name: "12-inch" },
               { id: "ALD-ANT-10", name: "10-inch" },
+              { id: "ALD-ANT-8", name: "8-inch" },
             ]
           },
           {
@@ -134,6 +149,7 @@ export const catalog: Category[] = [
             variants: [
               { id: "Apple-12", name: "12-inch" },
               { id: "Apple-10", name: "10-inch" },
+              { id: "Apple-8", name: "8-inch" },
             ]
           },
           {
@@ -144,6 +160,7 @@ export const catalog: Category[] = [
             variants: [
               { id: "Aldrop-Lehar-12", name: "12-inch" },
               { id: "Aldrop-Lehar-10", name: "10-inch" },
+              { id: "Aldrop-Lehar-8", name: "8-inch" },
             ]
           },
           {
@@ -152,6 +169,7 @@ export const catalog: Category[] = [
             description: "A simple yet stylish aldrop in a matte black finish, ideal for modern and minimalist interiors.",
             image: "/assets/images/aldrop-4-line.jpg",
             variants: [
+              { id: "ALD-BLK-12", name: "12-inch" },
               { id: "ALD-BLK-10", name: "10-inch" },
               { id: "ALD-BLK-8", name: "8-inch" },
             ]
@@ -181,38 +199,91 @@ export const catalog: Category[] = [
             description: "Elegant tower bolts with an antique brass finish for a classic aesthetic.",
             image: "/assets/images/towerbolt-brass.jpg",
             variants: [
-              { id: "TWB-AB-8", name: "8-inch" },
-              { id: "TWB-AB-6", name: "6-inch" },
-              { id: "TWB-AB-4", name: "4-inch" },
+              { id: "antique-brass-towerbolt--TWB-AB-8", name: "8-inch" },
+              { id: "antique-brass-towerbolt--TWB-AB-6", name: "6-inch" },
+              { id: "antique-brass-towerbolt--TWB-AB-4", name: "4-inch" },
+            ]
+          },
+          {
+            name: "Antique Brass Aluminium",
+            slug: "antique-brass-aluminium",
+            description: "Elegant tower bolts with an antique brass finish for a classic aesthetic.",
+            image: "/assets/images/towerbolt-aluminium.jpg",
+            variants: [
+              { id: "antique-brass-aluminium--TWB-AB-8", name: "8-inch" },
+              { id: "antique-brass-aluminium--TWB-AB-6", name: "6-inch" },
+              { id: "antique-brass-aluminium--TWB-AB-4", name: "4-inch" },
             ]
           }
         ]
       },
       {
-        name: "Door & Cabinet Handles",
+        name: "Door Handles",
         slug: "door-cabinet-handles",
         description: "A variety of stylish handles for doors and cabinets. Choose a style to see available finishes and sizes.",
         image: "/assets/images/handles-category.jpg",
         subItems: [
           {
-            name: "Mortise Classic Door Handle",
-            slug: "mortise-classic-handle",
+            name: "Door Handle SS-2013 CNC Wintage",
+            slug: "classic-handle-ss2013-wintage",
             description: "An elegant, classic handle set for main doors, available in several premium finishes.",
-            image: "/assets/images/handle-mortise.jpg",
+            image: "/assets/images/classic-handle-ss2013-wintage.jpg",
             variants: [
-              { id: "HNDL-MC-BR", name: "Brass Finish" },
-              { id: "HNDL-MC-SS", name: "Steel Finish" },
-              { id: "HNDL-MC-BLK", name: "Matte Black Finish" },
+              { id: "HNDL-MC-BR", name: "Standard Finish" },
             ]
           },
           {
-            name: "Modern Cabinet Pull Handle",
-            slug: "modern-cabinet-pull",
+            name: "Door Handle Black",
+            slug: "door-handle-black",
             description: "Sleek and minimalist pull handles perfect for modern kitchen cabinets and drawers.",
-            image: "/assets/images/handle-pull.jpg",
+            image: "/assets/images/door-handle-black.jpg",
             variants: [
               { id: "HNDL-CP-6", name: "6-inch length" },
               { id: "HNDL-CP-4", name: "4-inch length" },
+            ]
+          },
+          {
+            name: "Door Handle Lehar 2 Line",
+            slug: "door-handle-lehar-2-line",
+            description: "Sturdy bar handle with a clean profile for wardrobes and drawers.",
+            image: "/assets/images/door-handle-lehar-2-line.jpg",
+            variants: [
+              { id: "HNDL-BAR-12", name: "12-inch" },
+              { id: "HNDL-BAR-10", name: "10-inch" },
+              { id: "HNDL-BAR-8", name: "8-inch" },
+            ]
+          },
+          {
+            name: "Door Handle Apple",
+            slug: "door-handle-apple",
+            description: "Classic cup pull for drawers in timeless finishes.",
+            image: "/assets/images/door-handle-apple.jpg",
+            variants: [
+              { id: "HNDL-CUP-AB", name: "Antique Brass" },
+              { id: "HNDL-CUP-BN", name: "Brushed Nickel" },
+              { id: "HNDL-CUP-BLK", name: "Matte Black" },
+            ]
+          },
+          {
+            name: "Door Handle 3 Star",
+            slug: "door-handle-3-star",
+            description: "Compact T-bar knob for a sleek, modern look.",
+            image: "/assets/images/door-handle-3-star.jpg",
+            variants: [
+              { id: "HNDL-TBAR-64", name: "64mm center" },
+              { id: "HNDL-TBAR-96", name: "96mm center" },
+              { id: "HNDL-TBAR-128", name: "128mm center" },
+            ]
+          },
+          {
+            name: "Door Handle 2 Star",
+            slug: "door-handle-2-star",
+            description: "Hidden edge profile for handle-less cabinet doors.",
+            image: "/assets/images/door-handle-2-star.jpg",
+            variants: [
+              { id: "HNDL-EDGE-8", name: "8-inch" },
+              { id: "HNDL-EDGE-6", name: "6-inch" },
+              { id: "HNDL-EDGE-4", name: "4-inch" },
             ]
           }
         ]
@@ -230,9 +301,9 @@ export const catalog: Category[] = [
         description: "High-quality 19mm boards for furniture and construction.",
         image: "/assets/images/boards-19mm.jpg",
         variants: [
-          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
-          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
-          { id: "B19-6x3", name: "Size 6x3" },
+          { id: "boards-19mm--B19-8x4", name: "Size 8x4" }, { id: "boards-19mm--B19-8x3", name: "Size 8x3" },
+          { id: "boards-19mm--B19-7x4", name: "Size 7x4" }, { id: "boards-19mm--B19-7x3", name: "Size 7x3" },
+          { id: "boards-19mm--B19-6x3", name: "Size 6x3" },
         ]
       },
       {
@@ -335,9 +406,9 @@ export const catalog: Category[] = [
         description: "High-quality boards for furniture and construction.",
         image: "/assets/images/boilo.jpg",
         variants: [
-          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
-          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
-          { id: "B19-6x3", name: "Size 6x3" },
+          { id: "Boilo--B19-8x4", name: "Size 8x4" }, { id: "Boilo--B19-8x3", name: "Size 8x3" },
+          { id: "Boilo--B19-7x4", name: "Size 7x4" }, { id: "Boilo--B19-7x3", name: "Size 7x3" },
+          { id: "Boilo--B19-6x3", name: "Size 6x3" },
         ]
       },
       {
@@ -346,9 +417,9 @@ export const catalog: Category[] = [
         description: "High-quality boards for furniture and construction.",
         image: "/assets/images/hdhmr.jpg",
         variants: [
-          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
-          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
-          { id: "B19-6x3", name: "Size 6x3" },
+          { id: "HDHMR--B19-8x4", name: "Size 8x4" }, { id: "HDHMR--B19-8x3", name: "Size 8x3" },
+          { id: "HDHMR--B19-7x4", name: "Size 7x4" }, { id: "HDHMR--B19-7x3", name: "Size 7x3" },
+          { id: "HDHMR--B19-6x3", name: "Size 6x3" },
         ]
       },
       {
@@ -357,9 +428,9 @@ export const catalog: Category[] = [
         description: "High-quality boards for furniture and construction.",
         image: "/assets/images/mdf.jpg",
         variants: [
-          { id: "B19-8x4", name: "Size 8x4" }, { id: "B19-8x3", name: "Size 8x3" },
-          { id: "B19-7x4", name: "Size 7x4" }, { id: "B19-7x3", name: "Size 7x3" },
-          { id: "B19-6x3", name: "Size 6x3" },
+          { id: "MDF--B19-8x4", name: "Size 8x4" }, { id: "MDF--B19-8x3", name: "Size 8x3" },
+          { id: "MDF--B19-7x4", name: "Size 7x4" }, { id: "MDF--B19-7x3", name: "Size 7x3" },
+          { id: "MDF--B19-6x3", name: "Size 6x3" },
         ]
       }
     ]
@@ -442,35 +513,35 @@ export const catalog: Category[] = [
                 slug: "one-piece-ceramic-basin-001",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/one-piece-ceramic-basin-001.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "one-piece-ceramic-basin-001--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "One Piece Ceramic Basin 002",
                 slug: "one-piece-ceramic-basin-002",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/one-piece-ceramic-basin-002.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "one-piece-ceramic-basin-002--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "One Piece Ceramic Basin 003",
                 slug: "one-piece-ceramic-basin-003",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/one-piece-ceramic-basin-003.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "one-piece-ceramic-basin-003--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "One Piece Ceramic Basin 004",
                 slug: "one-piece-ceramic-basin-004",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/one-piece-ceramic-basin-004.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "one-piece-ceramic-basin-004--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "One Piece Ceramic Basin 005",
                 slug: "one-piece-ceramic-basin-005",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/one-piece-ceramic-basin-005.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "one-piece-ceramic-basin-005--WB-CTC-STD", name: "Standard Model" }]
               }
             ]
           },
@@ -485,56 +556,56 @@ export const catalog: Category[] = [
                 slug: "pedestal-basin-001",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-001.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-001--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 002",
                 slug: "pedestal-basin-002",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-002.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-002--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 003",
                 slug: "pedestal-basin-003",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-003.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-003--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 004",
                 slug: "pedestal-basin-004",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-004.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-004--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 005",
                 slug: "pedestal-basin-005",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-005.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-005--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 006",
                 slug: "pedestal-basin-006",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-006.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-006--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 007",
                 slug: "pedestal-basin-007",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-007.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-007--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Pedistal Basin 008",
                 slug: "pedestal-basin-008",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/pedestal-basin-008.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "pedestal-basin-008--WB-CTC-STD", name: "Standard Model" }]
               }
             ]
           },
@@ -549,28 +620,28 @@ export const catalog: Category[] = [
                 slug: "platform-basin-001",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/platform-basin-001.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "platform-basin-001--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Platform Basin 002",
                 slug: "platform-basin-002",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/platform-basin-002.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "platform-basin-002--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Platform Basin 003",
                 slug: "platform-basin-003",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/platform-basin-003.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "platform-basin-003--WB-CTC-STD", name: "Standard Model" }]
               },
               {
                 name: "Platform Basin 004",
                 slug: "platform-basin-004",
                 description: "An elegant basin that sits on top of a counter, perfect for modern bathrooms.",
                 image: "/assets/images/platform-basin-004.jpg",
-                variants: [{ id: "WB-CTC-STD", name: "Standard Model" }]
+                variants: [{ id: "platform-basin-004--WB-CTC-STD", name: "Standard Model" }]
               }
             ]
           }
@@ -623,49 +694,49 @@ export const catalog: Category[] = [
             slug: "pillar-cock",
             description: "A classic tap design for basins, providing a steady stream of cold or pre-mixed water.",
             image: "/assets/images/tap-pillar.jpg",
-            variants: [{ id: "TF-PC-STD", name: "Chrome Finish" }]
+            variants: [{ id: "pillar-cock--TF-PC-STD", name: "Chrome Finish" }]
           },
           {
             name: "Long Body",
             slug: "long-body",
             description: "A classic tap design for basins, providing a steady stream water.",
             image: "/assets/images/long-body.jpg",
-            variants: [{ id: "TF-PC-STD", name: "Chrome Finish" }]
+            variants: [{ id: "long-body--TF-PC-STD", name: "Chrome Finish" }]
           },
           {
             name: "Swan Neck Pillar Cock",
             slug: "swan-neck-pillar-cock",
             description: "A classic tap design for basins, providing a steady stream water.",
             image: "/assets/images/swan-neck-pillar-cock.jpg",
-            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+            variants: [{ id: "swan-neck-pillar-cock--TF-SLM-STD", name: "Chrome Finish" }]
           },
           {
             name: "Sink Cock",
             slug: "sink-cock",
             description: "A classic tap design for basins, providing a steady stream water.",
             image: "/assets/images/sink-cock.jpg",
-            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+            variants: [{ id: "sink-cock--TF-SLM-STD", name: "Chrome Finish" }]
           },
           {
             name: "Angle Cock",
             slug: "angle-cock",
             description: "A classic tap design for basins, providing a steady stream water.",
             image: "/assets/images/angle-cock.jpg",
-            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+            variants: [{ id: "angle-cock--TF-SLM-STD", name: "Chrome Finish" }]
           },
           {
             name: "2 Way Angle Cock",
             slug: "way-2-angle-cock",
             description: "A classic tap design for basins, providing a steady stream water.",
             image: "/assets/images/way-2-angle-cock.jpg",
-            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+            variants: [{ id: "way-2-angle-cock--TF-SLM-STD", name: "Chrome Finish" }]
           },
           {
             name: "2 Way Bib Cock",
             slug: "way-2-bib-cock",
             description: "A classic tap design for basins, providing a steady stream water.",
             image: "/assets/images/way-2-bib-cock.jpg",
-            variants: [{ id: "TF-SLM-STD", name: "Chrome Finish" }]
+            variants: [{ id: "way-2-bib-cock--TF-SLM-STD", name: "Chrome Finish" }]
           }
         ]
       },

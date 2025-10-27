@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "b2b-catalog-to-whatsapp": "file:.."
+  }
+}
